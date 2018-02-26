@@ -12,6 +12,12 @@ To install the `lmgtfy` CLI simply run
 go get github.com/Knappek/lmgtfy
 ```
 
+and to install `lmgtfy`, navigate to `$GOPATH/src/github.com/Knappek/lmgtfy/` and run
+
+```shell
+go install
+```
+
 ## Usage
 
 In a shell, simply type
