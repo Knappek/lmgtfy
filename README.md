@@ -49,3 +49,10 @@ lmgtfy -g "What is Let me google that for you?" -s
 ```
 
 which will print http://tinyurl.com/3so56ko and, if you are on Linux or MacOS, will directly copy it to your clipboard.
+
+# Next Steps
+
+* Travis Badge
+* CI with proper tests
+* code lint
+* code coverage
