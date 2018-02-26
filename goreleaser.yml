@@ -2,3 +2,8 @@ build:
   main: lmgtfy.go
   goarch:
     - amd64
+brew:
+  github:
+    owner: Knappek
+    name: homebrew-tap
+  folder: Formula
