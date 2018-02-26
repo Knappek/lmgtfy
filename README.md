@@ -4,7 +4,7 @@ This is a [lmgtfy](https://github.com/pykler/lmgtfy) CLI written in Go which mak
 
 ## Install
 
-TODO: brew install
+TODO:brew install
 
 To install the `lmgtfy` CLI simply run
 
