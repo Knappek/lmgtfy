@@ -1,0 +1,4 @@
+build:
+  main: lmgtfy.go
+  goarch:
+    - amd64
