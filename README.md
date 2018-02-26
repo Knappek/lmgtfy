@@ -4,7 +4,13 @@ This is a [lmgtfy](https://github.com/pykler/lmgtfy) CLI written in Go which mak
 
 ## Install
 
-TODO:brew install
+### MacOS
+
+```shell
+brew install Knappek/tap/lmgtfy
+```
+
+### Other OS with Go installed
 
 To install the `lmgtfy` CLI simply run
 
@@ -17,6 +23,12 @@ and to install `lmgtfy`, navigate to `$GOPATH/src/github.com/Knappek/lmgtfy/` an
 ```shell
 go install
 ```
+
+In order to use `lmgtfy` make sure `$GOPATH/bin` is in your PATH.
+
+### Without Go installed
+
+You can simply download the latest release from the [release](https://github.com/Knappek/lmgtfy/releases) page and use the binary `lmgtfy`.
 
 ## Usage
 
