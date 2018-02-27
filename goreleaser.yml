@@ -1,5 +1,4 @@
 builds:
-  - binary: lmgtfy
     main: lmgtfy.go
     goos:
       - windows
