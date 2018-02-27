@@ -55,6 +55,7 @@ which will print http://tinyurl.com/3so56ko and, if you are on Linux or MacOS, w
 
 # Next Steps
 
+* build for windows
 * CI with proper tests
 * code lint
 * code coverage
