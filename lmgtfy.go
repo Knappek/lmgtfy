@@ -87,7 +87,9 @@ func main() {
       fmt.Println(lmgtfy_string)
 
       os := runtime.GOOS
-      toClipboard([]byte(lmgtfy_string), os)
+      if (os != "windows" ){
+        toClipboard([]byte(lmgtfy_string), os)
+      }
 
       return nil
 	}
