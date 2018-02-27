@@ -31,7 +31,7 @@ In order to use `lmgtfy` make sure `$GOPATH/bin` is in your PATH.
 
 ### Without Go installed
 
-You can simply download the latest release from the [release](https://github.com/Knappek/lmgtfy/releases) page, rename the downloaded file to `lmgtfy` and move it to your path.
+You can simply download the latest release from the [release](https://github.com/Knappek/lmgtfy/releases) page, extract it and move the binary to your path.
 
 
 ## Usage
