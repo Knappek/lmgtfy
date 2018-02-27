@@ -23,12 +23,10 @@ func toClipboard(output []byte, arch string) {
 	// Mac "OS"
 	if arch == "darwin" {
 		copyCmd = exec.Command("pbcopy")
-		fmt.Println("Url copied to clipboard")
 	}
 	// Linux
 	if arch == "linux" {
 		copyCmd = exec.Command("xclip", "-selection", "c")
-		fmt.Println("Url copied to clipboard")
 	}
 	in, err := copyCmd.StdinPipe()
 	if err != nil {
@@ -44,6 +42,7 @@ func toClipboard(output []byte, arch string) {
 		log.Fatal(err)
 	}
 	copyCmd.Wait()
+    fmt.Println("Url copied to clipboard")
 }
 
 func shortenUrl(url string, provider string) string {

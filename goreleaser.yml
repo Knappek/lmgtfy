@@ -1,5 +1,9 @@
 build:
   main: lmgtfy.go
+  goos:
+    - windows
+    - linux
+    - darwin
   goarch:
     - amd64
 brew:
