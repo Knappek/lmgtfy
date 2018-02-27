@@ -1,5 +1,8 @@
 # Let me google that for you CLI
 
+[![Release](https://img.shields.io/github/release/Knappek/lmgtfy.svg?style=flat-square)](https://github.com/Knappek/lmgtfy/releases/latest)
+[![Travis](https://img.shields.io/travis/Knappek/lmgtfy.svg?style=flat-square)](https://travis-ci.org/Knappek/lmgtfy)
+
 This is a [lmgtfy](https://github.com/pykler/lmgtfy) CLI written in Go which makes it easy to create Let me google that for you links.
 
 ## Install
@@ -52,7 +55,6 @@ which will print http://tinyurl.com/3so56ko and, if you are on Linux or MacOS, w
 
 # Next Steps
 
-* Travis Badge
 * CI with proper tests
 * code lint
 * code coverage
