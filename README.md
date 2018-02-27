@@ -2,6 +2,7 @@
 
 [![Release](https://img.shields.io/github/release/Knappek/lmgtfy.svg?style=flat-square)](https://github.com/Knappek/lmgtfy/releases/latest)
 [![Travis](https://img.shields.io/travis/Knappek/lmgtfy.svg?style=flat-square)](https://travis-ci.org/Knappek/lmgtfy)
+[![Go Report Card](https://goreportcard.com/badge/Knappek/lmgtfy "Go Report Card")](https://goreportcard.com/report/Knappek/lmgtfy)
 
 This is a [lmgtfy](https://github.com/pykler/lmgtfy) CLI written in Go which makes it easy to create Let me google that for you links.
 
