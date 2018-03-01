@@ -3,6 +3,8 @@
 [![Release](https://img.shields.io/github/release/Knappek/lmgtfy.svg?style=flat-square)](https://github.com/Knappek/lmgtfy/releases/latest)
 [![Travis](https://img.shields.io/travis/Knappek/lmgtfy.svg?style=flat-square)](https://travis-ci.org/Knappek/lmgtfy)
 [![Go Report Card](https://goreportcard.com/badge/Knappek/lmgtfy "Go Report Card")](https://goreportcard.com/report/Knappek/lmgtfy)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Powered By: GoReleaser](https://img.shields.io/badge/powered%20by-goreleaser-green.svg?style=flat-square)](https://github.com/goreleaser)
 
 This is a [lmgtfy](https://github.com/pykler/lmgtfy) CLI written in Go which makes it easy to create Let me google that for you links.
 
