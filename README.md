@@ -11,7 +11,7 @@ This is a [lmgtfy](https://github.com/pykler/lmgtfy) CLI written in Go which mak
 ### MacOS
 
 ```shell
-brew install Knappek/tap/lmgtfy
+brew install lmgtfy
 ```
 
 ### Other OS with Go installed
@@ -36,6 +36,10 @@ You can simply download the latest release from the [release](https://github.com
 
 
 ## Usage
+
+<p align="center">
+<img src="lmgtfy-recording.gif" alt="lmgtfy-usage" title="lmgtfy Usage (animated gif)" />
+</p>
 
 In a shell, simply type
 
