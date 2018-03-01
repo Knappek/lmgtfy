@@ -37,9 +37,6 @@ You can simply download the latest release from the [release](https://github.com
 
 ## Usage
 
-<img src="lmgtfy-recording.gif" width="673" alt="lmgtfy Usage (animated gif)">
-
-
 In a shell, simply type
 
 ```shell
