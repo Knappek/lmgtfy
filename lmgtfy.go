@@ -12,10 +12,10 @@ import (
     "github.com/subosito/shorturl"
 )
 
-func lmgtfy_url(s string) string {
-	str_enc := url.QueryEscape(s)
-	lmgtfy_string := "http://lmgtfy.com/?q=" + str_enc
-	return lmgtfy_string
+func lmgtfyUrl(s string) string {
+	strEnc := url.QueryEscape(s)
+	lmgtfyString := "http://lmgtfy.com/?q=" + strEnc
+	return lmgtfyString
 }
 
 func toClipboard(output []byte, arch string) {
@@ -55,7 +55,7 @@ func shortenUrl(url string, provider string) string {
 
 func main() {
     var search string
-    var shorten_provider string
+    var shortenProvider string
 
 	app := cli.NewApp()
 	app.Name = "lmgtfy"
@@ -76,19 +76,19 @@ func main() {
         Name: "shorten-provider",
         Value: "tinyurl",
         Usage: "shorten URL in order to hide the lmgtfy.com prefix - defaults to 'tinyurl'. Multiple provider possible, see https://github.com/subosito/shorturl",
-        Destination: &shorten_provider,
+        Destination: &shortenProvider,
       },
     }
 	app.Action = func(c *cli.Context) error {
-      lmgtfy_string := lmgtfy_url(search)
+      lmgtfyString := lmgtfyUrl(search)
       if c.Bool("shorten"){
-        lmgtfy_string = shortenUrl(lmgtfy_string, shorten_provider)
+        lmgtfyString = shortenUrl(lmgtfyString, shortenProvider)
       }
-      fmt.Println(lmgtfy_string)
+      fmt.Println(lmgtfyString)
 
       os := runtime.GOOS
       if (os != "windows" ){
-        toClipboard([]byte(lmgtfy_string), os)
+        toClipboard([]byte(lmgtfyString), os)
       }
 
       return nil
