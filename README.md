@@ -13,7 +13,7 @@ This is a [lmgtfy](https://github.com/pykler/lmgtfy) CLI written in Go which mak
 ### MacOS
 
 ```shell
-brew install lmgtfy
+brew install Knappek/tap/lmgtfy
 ```
 
 ### Other OS with Go installed
