@@ -8,11 +8,11 @@ import (
 	"os/exec"
 	"runtime"
 
+	"github.com/subosito/shorturl"
 	"github.com/urfave/cli"
-    "github.com/subosito/shorturl"
 )
 
-func lmgtfyUrl(s string) string {
+func lmgtfyURL(s string) string {
 	strEnc := url.QueryEscape(s)
 	lmgtfyString := "http://lmgtfy.com/?q=" + strEnc
 	return lmgtfyString
@@ -42,56 +42,56 @@ func toClipboard(output []byte, arch string) {
 		log.Fatal(err)
 	}
 	copyCmd.Wait()
-    fmt.Println("Url copied to clipboard")
+	fmt.Println("Url copied to clipboard")
 }
 
-func shortenUrl(url string, provider string) string {
-  u, err := shorturl.Shorten(url, provider)
-  if err != nil { 
-    log.Fatal(err)
-  }
-  return string(u)
+func shortenURL(url string, provider string) string {
+	u, err := shorturl.Shorten(url, provider)
+	if err != nil {
+		log.Fatal(err)
+	}
+	return string(u)
 }
 
 func main() {
-    var search string
-    var shortenProvider string
+	var search string
+	var shortenProvider string
 
 	app := cli.NewApp()
 	app.Name = "lmgtfy"
 	app.Usage = "The Let me google that for you CLI"
 	app.Version = "0.1.0"
 
-    app.Flags = []cli.Flag {
-      cli.StringFlag{
-        Name: "google, g",
-        Usage: "Google Search Text",
-        Destination: &search,
-      },
-      cli.BoolFlag{
-        Name: "shorten, s",
-        Usage: "Shorten Url with the Provider given in 'shorten-provider'",
-      },
-      cli.StringFlag{
-        Name: "shorten-provider",
-        Value: "tinyurl",
-        Usage: "shorten URL in order to hide the lmgtfy.com prefix - defaults to 'tinyurl'. Multiple provider possible, see https://github.com/subosito/shorturl",
-        Destination: &shortenProvider,
-      },
-    }
+	app.Flags = []cli.Flag{
+		cli.StringFlag{
+			Name:        "google, g",
+			Usage:       "Google Search Text",
+			Destination: &search,
+		},
+		cli.BoolFlag{
+			Name:  "shorten, s",
+			Usage: "Shorten Url with the Provider given in 'shorten-provider'",
+		},
+		cli.StringFlag{
+			Name:        "shorten-provider",
+			Value:       "tinyurl",
+			Usage:       "shorten URL in order to hide the lmgtfy.com prefix - defaults to 'tinyurl'. Multiple provider possible, see https://github.com/subosito/shorturl",
+			Destination: &shortenProvider,
+		},
+	}
 	app.Action = func(c *cli.Context) error {
-      lmgtfyString := lmgtfyUrl(search)
-      if c.Bool("shorten"){
-        lmgtfyString = shortenUrl(lmgtfyString, shortenProvider)
-      }
-      fmt.Println(lmgtfyString)
+		lmgtfyString := lmgtfyURL(search)
+		if c.Bool("shorten") {
+			lmgtfyString = shortenURL(lmgtfyString, shortenProvider)
+		}
+		fmt.Println(lmgtfyString)
 
-      os := runtime.GOOS
-      if (os != "windows" ){
-        toClipboard([]byte(lmgtfyString), os)
-      }
+		os := runtime.GOOS
+		if os != "windows" {
+			toClipboard([]byte(lmgtfyString), os)
+		}
 
-      return nil
+		return nil
 	}
 
 	app.Run(os.Args)
