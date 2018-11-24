@@ -75,7 +75,7 @@ func main() {
 		cli.StringFlag{
 			Name:        "shorten-provider",
 			Value:       "tinyurl",
-			Usage:       "shorten URL in order to hide the lmgtfy.com prefix - defaults to 'tinyurl'. Multiple provider possible, see https://github.com/subosito/shorturl",
+			Usage:       "shorten URL in order to hide the lmgtfy.com prefix. Multiple provider possible, see https://github.com/subosito/shorturl",
 			Destination: &shortenProvider,
 		},
 	}
